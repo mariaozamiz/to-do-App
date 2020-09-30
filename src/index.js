@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './stylesheets/index.css';
-import App from './components/App';
+import App from './App';
 
 ReactDOM.render(
     <React.StrictMode>
@@ -9,5 +9,3 @@ ReactDOM.render(
     </React.StrictMode>,
     document.getElementById('root')
 );
-
-//Esta página asocia el div id root de la página con el index de public

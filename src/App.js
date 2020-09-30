@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from './Form';
+import Form from './components/Form';
 
 function App() {
     return (
@@ -7,6 +7,7 @@ function App() {
             <header>
                 <h1>TO-DO LIST</h1>
             </header>
+            <Form />
         </div>
     );
 }
