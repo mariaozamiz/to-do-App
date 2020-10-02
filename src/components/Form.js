@@ -6,12 +6,15 @@ function Form({ setInputText, inputText, todos, setTodos }) {
     };
     const submitTodoHandler = (ev) => {
         ev.preventDefault();
-        if (inputText.length > 0) {
-            setTodos([
-                ...todos,
-                { text: inputText, completed: false, id: Math.random() * 1000 },
-            ]);
-        }
+        setTodos([
+            ...todos,
+            {
+                text: inputText,
+                completed: false,
+                id: Math.floor(Math.random() * 1000),
+            },
+        ]);
+        setInputText('');
     };
     return (
         <form>
@@ -19,6 +22,7 @@ function Form({ setInputText, inputText, todos, setTodos }) {
                 type="text"
                 className="todo-input"
                 onChange={inputTextHandler}
+                value={inputText}
             />
             <button
                 className="todo-button"

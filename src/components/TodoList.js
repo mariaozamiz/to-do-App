@@ -1,9 +1,18 @@
 import React from 'react';
+import Todo from './Todo';
 
-function TodoList({ inputText }) {
+function TodoList({ todos }) {
     return (
         <div className="todo-container">
-            <ul className="todo-list"></ul>
+            <ul className="todo-list">
+                {todos.map((todo) => (
+                    <Todo
+                        text={todo.text}
+                        completed={todo.completed}
+                        key={todo.id}
+                    />
+                ))}
+            </ul>
         </div>
     );
 }
