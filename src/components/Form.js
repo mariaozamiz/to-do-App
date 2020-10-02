@@ -11,7 +11,7 @@ function Form({ setInputText, inputText, todos, setTodos }) {
             {
                 text: inputText,
                 completed: false,
-                id: Math.floor(Math.random() * 1000),
+                id: Math.floor(Math.random() * 100000),
             },
         ]);
         setInputText('');
