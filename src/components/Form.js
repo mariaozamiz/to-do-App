@@ -1,21 +1,28 @@
 import React from 'react';
 
-function Form({ setInputText, inputText, todos, setTodos }) {
+function Form({ setInputText, inputText, todos, setTodos, setStatus }) {
     const inputTextHandler = (ev) => {
         setInputText(ev.target.value);
     };
     const submitTodoHandler = (ev) => {
         ev.preventDefault();
-        setTodos([
-            ...todos,
-            {
-                text: inputText,
-                completed: false,
-                id: Math.floor(Math.random() * 100000),
-            },
-        ]);
-        setInputText('');
+        if (inputText.length > 0) {
+            setTodos([
+                ...todos,
+                {
+                    text: inputText,
+                    completed: false,
+                    id: Math.floor(Math.random() * 100000),
+                },
+            ]);
+            setInputText('');
+        }
     };
+
+    const statusHandler = (ev) => {
+        setStatus(ev.target.value);
+    };
+
     return (
         <form>
             <input
@@ -32,7 +39,11 @@ function Form({ setInputText, inputText, todos, setTodos }) {
                 <i className="fas fa-plus-square"></i>
             </button>
             <div className="select">
-                <select name="todos" className="filter-todo">
+                <select
+                    onChange={statusHandler}
+                    name="todos"
+                    className="filter-todo"
+                >
                     <option value="all">All</option>
                     <option value="completed">Completed</option>
                     <option value="uncompleted">Uncompleted</option>
