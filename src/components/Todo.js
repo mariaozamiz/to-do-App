@@ -2,10 +2,21 @@ import React from 'react';
 
 function Todo({ text, todos, todo, setTodos }) {
     const completeBtnHandler = () => {
-        console.log('tarea completada');
+        setTodos(
+            todos.map((item) => {
+                if (item.id === todo.id) {
+                    return {
+                        ...item,
+                        completed: !item.completed,
+                    };
+                }
+                return item;
+            })
+        );
     };
+
     const TrashBtnHandler = () => {
-        setTodos(todos.filter((element) => element.id !== todo.id));
+        setTodos(todos.filter((item) => item.id !== todo.id));
     };
 
     return (
