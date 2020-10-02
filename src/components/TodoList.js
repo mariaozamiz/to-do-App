@@ -1,6 +1,6 @@
 import React from 'react';
 
-function TodoList() {
+function TodoList({ inputText }) {
     return (
         <div className="todo-container">
             <ul className="todo-list"></ul>
