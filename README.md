@@ -1,6 +1,6 @@
 # To-do List
 
-**To-do List** es una aplicación web sencilla creada con **React** para hacer un seguimiento de tareas diarias: añadir tareas, tachar aquellas ya completadas y filtrar la lista por estado.
+**To-do List** es una aplicación web sencilla creada con **React** para hacer un seguimiento de tareas diarias: añadir tareas, tachar aquellas ya completadas y filtrar la lista por estado (completadas, pendientes o todas). Las tareas introducidas se guardan en el localStorage, por lo que la información se mantendrá en la página aunque cerremos el explorador.
 
 ![Captura de pantalla](https://github.com/mariaozamiz/to-do-App/blob/master/src/images/captura_pantalla_todo_list.png)
 
