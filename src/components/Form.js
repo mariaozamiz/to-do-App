@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 function Form({ setInputText, inputText, todos, setTodos, setStatus }) {
     const inputTextHandler = (ev) => {
@@ -12,7 +13,7 @@ function Form({ setInputText, inputText, todos, setTodos, setStatus }) {
                 {
                     text: inputText,
                     completed: false,
-                    id: Math.floor(Math.random() * 100000),
+                    id: uuidv4(),
                 },
             ]);
             setInputText('');
