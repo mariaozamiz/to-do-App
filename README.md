@@ -10,7 +10,7 @@ He creado este proyecto siguiendo los pasos de @developedbyed en este [tutorial]
 
 En mi versión, he incluido un condicional a la función encargada de añadir tareas al listado para evitar que puedan agregarse tareas sin texto. También he optado por otra forma de generar identificadores: en lugar de usar ```Math.Random()```, instalé la librería [uuid](https://github.com/uuidjs/uuid), que genera id únicos.
 
-```
+```javascript
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
